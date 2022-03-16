@@ -1,0 +1,23 @@
+<div class="container">
+<br/>
+<h1>Creer un nouvel article </h1>
+<br/>
+<br/>
+<%= form_for @item do |f| %>
+<div class="form-group">
+<label class="form-label">Nom de l'article</label>
+<%= f.text_field :name, class: 'form-control' %>
+</div>
+<div class="form-group">
+<label class="form-label">Description de l'article</label>
+<%= f.text_area :description, class: 'form-control' %>
+</div>
+<div class="form-group">
+<label class="form-label">Prix de l'article</label>
+<%= f.number_field :price, step: 0.01, class: 'form-control' %>
+</div>
+<div class="form-group">
+<button type="submit" class="btn btn-primary">Créer l'article</button>
+</div>
+<% end %>
+</div>
