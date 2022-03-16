@@ -1,2 +1,28 @@
-<h1>Items#edit</h1>
-<p>Find me in app/views/items/edit.html.erb</p>
+<div class="container">
+  <br/>
+  <h1>Modifier l'article </h1><br/>
+  <br/>
+  <%= form_for @item do |f| %>
+  <div class="form-group">
+    <label class="form-label">Nom de l'article</label>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Description de l'article</label>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <label class="form-label">Prix de l'article</label>
+    <%= f.number_field :price, step: 0.01, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="btn btn-success">Modifier
+    l'article</button>
+  </div>
+  <br/>
+  <a href="<%= items_path %>" class="btn btn-secondary">Retourner à
+  l'acceuil</a>
+  <a href="<%= item_path(@item.id) %>" class="btn btn-secondary">Retourner
+  sur l'article</a>
+  <% end %>
+</div>
