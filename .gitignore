@@ -26,3 +26,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 .env
+
+# Ignore publishable&secret key for decrypting credentials and more.
+/config/initializers/stripe.rb
