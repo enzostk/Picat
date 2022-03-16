@@ -1,7 +1,6 @@
 class CartsController < ApplicationController
   def show
-    # @items_in_cart = JoinTableItemsCarts.where(cart_id: current_user.cart.id)
-    @items_in_cart = Cart.where(id: current_user.id)
+    @items_in_cart = JoinTableItemsCart.where(cart_id: current_user.cart.id)
   end
 
   def create
