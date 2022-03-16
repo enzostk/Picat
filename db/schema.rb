@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_16_114956) do
+ActiveRecord::Schema.define(version: 2022_03_16_120534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 2022_03_16_114956) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "join_table_items_carts", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "cart_id"
+    t.integer "quantity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cart_id"], name: "index_join_table_items_carts_on_cart_id"
+    t.index ["item_id"], name: "index_join_table_items_carts_on_item_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -43,4 +53,6 @@ ActiveRecord::Schema.define(version: 2022_03_16_114956) do
   end
 
   add_foreign_key "carts", "users"
+  add_foreign_key "join_table_items_carts", "carts"
+  add_foreign_key "join_table_items_carts", "items"
 end
