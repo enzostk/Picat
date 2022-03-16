@@ -26,7 +26,7 @@ only">(current)</span></a>
 <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 </span>
 <span class="navbar-text nav-link">
-<%= link_to "Mon panier", items_path %>
+<%= link_to "Mon panier", cart_path(current_user.cart.id) %>
 </span>
 <% else %>
 <span class="navbar-text nav-link">

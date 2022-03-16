@@ -1,1 +1,20 @@
-<h1>COUCOU</h1>
+<br/>
+<div class="container">
+<h1>Tout les articles</h1>
+<a href="<%= new_item_path %>" type="button" class="btn btn-primary">Creer un
+nouvel article</a>
+<br/>
+<br/>
+<br/>
+<% @items.each do |item| %>
+<div class="card" style="width: 18rem;">
+<div class="card-body">
+<h5 class="card-title"><%= item.name %></h5>
+<p class="card-text"><%= item.description %></p>
+<p class="card-text"><%= item.price %>€</p>
+<a href="<%= item_path(item.id) %>" class="card-link">En savoir plus</a>
+</div>
+</div>
+<br/>
+<% end %>
+</div>
