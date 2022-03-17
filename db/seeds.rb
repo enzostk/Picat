@@ -16,6 +16,7 @@ end
   name: "Petit chat#{i+1}",
   description: "Petit con de chat",
   price: 12,
+  image_url: "cat#{i+1}.png"
 );
 
 end
