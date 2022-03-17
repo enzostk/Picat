@@ -1,4 +1,8 @@
 class ItemsController < ApplicationController
+  include ItemsHelper
+
+  before_action :save_items_in_cart
+
   def index
     @items = Item.all
   end
