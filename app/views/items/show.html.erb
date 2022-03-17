@@ -1,16 +1,21 @@
 <br/>
 <div class="container">
-<h1><%= @item.name %></h1>
+  <h1><%= @item.name %></h1>
 
-<br/>
-<h4>Description de l'article:</h4>
-<p><%= @item.description %></p>
-<br/>
-<p>Prix: <%= @item.price %>€</p>
-<br/>
-<a href="<%= edit_item_path %>" class="btn btn-warning">Modifier</a>
-<a href="<%= item_path(@item.id) %>" class="btn btn-danger" data-confirm="Êtes-vous sûr de vouloir supprimer cet article ?" data-method="DELETE">Supprimer</a>
-<br/>
-<br/>
-<a href="<%= root_path %>" class="btn btn-secondary">Retourner à l'accueil</a>
+  <br/>
+  <h4>Description de l'article:</h4>
+  <p><%= @item.description %></p>
+  <br/>
+  <p>Prix: <%= @item.price %>€</p>
+  <%= form_for @join_table_items_cart do |f| %>
+    <%= f.hidden_field :item_id, value: @item.id %>
+    <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+    <button type="submit" class="btn btn-success">Ajouter au panier</button>
+  <% end %>
+  <br/><br/>
+  <a href="<%= edit_item_path %>" class="btn btn-warning">Modifier</a>
+  <a href="<%= item_path(@item.id) %>" class="btn btn-danger" data-confirm="Êtes-vous sûr de vouloir supprimer cet article ?" data-method="DELETE">Supprimer</a>
+  <br/>
+  <br/>
+  <a href="<%= root_path %>" class="btn btn-secondary">Retourner à l'accueil</a>
 </div>

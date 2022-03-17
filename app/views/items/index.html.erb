@@ -7,10 +7,16 @@
   <% @items.each do |item| %>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><%= item.name %></h5>
+      <a href="<%= item_path(item.id) %>" class='card-link'><h5 class="card-title"><%= item.name %></h5></a>
       <p class="card-text"><%= item.description %></p>
       <p class="card-text"><%= item.price %>€</p>
-      <a href="<%= item_path(item.id)%>" class='card-link'>En Savoir plus</a>
+      <% if user_signed_in? %>
+      <%= form_for @join_table_items_cart do |f| %>
+      <%= f.hidden_field :item_id, value: item.id %>
+      <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+      <button type="submit" class='btn btn-success'>Ajouter au panier</button>
+      <% end %>
+      <% end %>
     </div>
   </div>
   <br/>
