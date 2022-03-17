@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @join_table_items_cart = JoinTableItemsCart.new
   end
 
   def show
