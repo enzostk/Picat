@@ -13,3 +13,138 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+ *{
+   margin:0;
+   padding:0;
+   box-sizing:border-box;
+ }
+ body, html{height:100%;}
+ body { 
+   background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v978-background-02-kpzgw7o8.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e62663bb68a9df004c04635304ebb5f8");
+   background-color: #cccccc;
+   height: 100%; 
+   margin: 0;
+   background-size: cover; 
+   display: flex;
+   flex-direction:column;
+ }
+ #main{
+   max-width:1280px;
+   min-height:100%;
+   margin:0 auto;
+   position:relative;
+ }
+
+a {
+  text-decoration: inherit;
+}
+ul {
+  list-style: none;
+}
+
+/************************************************ NAVBAR *************************************************/
+ .navbar {
+  background-color: #eb6864;
+}
+.cobutton {
+  margin-left:1350px;
+  color: #ffffff;
+}
+/*********************************************************************************************************/
+
+.banner { 
+  color: #eb6864;
+  background-image: url("https://www.puppify.co.za/wp-content/uploads/2020/03/42.png"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.banner .p {
+  color: white;
+}
+
+/************************************************ FOOTER *************************************************/
+.container1{
+	max-width: 100%;
+	margin:auto;
+}
+.row1{
+	display: flex;
+	flex-wrap: wrap;
+}
+.footer{
+	background-color: #eb6864;
+  bottom: 0;
+  padding: 30px ;
+
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 75px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+
+@media(max-width: 767px){
+  .footer-col {
+    width:50%;
+    margin-bottom:30px;
+  }
+}
+@media(max-width:574px){
+  .footer-col {
+    width:100%;
+  }
+}
+/*********************************************************************************************************/
