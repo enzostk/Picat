@@ -8,6 +8,9 @@ class JoinTableItemsCartsController < ApplicationController
   end
 
   def destroy
+    @item_delete = JoinTableItemsCart.find(params[:id])
+    @item_delete.destroy
+    redirect_to cart_path
   end
 
   private
