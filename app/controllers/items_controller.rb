@@ -1,10 +1,16 @@
 class ItemsController < ApplicationController
+  include ItemsHelper
+
+  before_action :save_items_in_cart
+
   def index
     @items = Item.all
+    @join_table_items_cart = JoinTableItemsCart.new
   end
 
   def show
     @item = Item.find(params[:id])
+    @join_table_items_cart = JoinTableItemsCart.new
   end
 
   def new
