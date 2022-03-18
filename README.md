@@ -5,7 +5,8 @@
 
 </div>
 </br></br>
-## Nothing is working anymore :crying_cat_face: :crying_cat_face: :crying_cat_face: 
+
+# :crying_cat_face: :crying_cat_face: Nothing is working anymore :crying_cat_face: :crying_cat_face: :crying_cat_face: 
 
 # Link to heroku app
 https://git.heroku.com/picat-development.git
@@ -21,49 +22,7 @@ https://git.heroku.com/picat-development.git
 
 <hr>
 
-Things you may want to cover 📝
 
-* Ruby version
- Ruby 2.7.4p191 ©
-
-* System dependencies
- Using Bundler and brew:
- `install bundle && brew bundle`
-
-* Configuration
- Rails 5.2.6.2 ©
-
-
-* Database creation
- `rails db:create`
-
-* Database initialization
- `rails db:create db:migrate db:seed`
-
-* How to run the test suite
- `rails db:seed`
-
-* Access the app:
-  `https://picat-development.herokuapp.com/`
-
-* Remote: Verifying deployed
-  To `https://git.heroku.com/picat.git`
-
-
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-  Guide how to deploy your Ruby on Rails application on a Linux VM. It is tested and known to work on:
-
-    Ubuntu Linux 20.04 LTS
-    Debian 11
-
- https://www.ralfebert.com/tutorials/rails-deployment/
-
-
-<hr>
-<hr>
 
 ## This project contain the following tech :
 
