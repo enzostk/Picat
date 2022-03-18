@@ -1,0 +1,8 @@
+var stripe = Stripe('<%= Rails.configuration.stripe[:publishable_key] %>');
+var stripe = Stripe('la_cle_publique_ici');
+stripe.redirectToCheckout({
+sessionId: '<%= @session.id %>'
+}).then(function(result){
+console.log(result.error.message);
+console.log(result.errors.messages);
+});

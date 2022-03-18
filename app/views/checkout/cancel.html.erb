@@ -1,0 +1,7 @@
+<div class="container text-center my-5">
+<h1>Cancel</h1>
+<p>Dommage t'es pauvre, retourne chez maman!!<p>
+<p>Le statut du paiement est : <%= @payment_intent.status %> </p>
+</div>
+
+<%= button_to "Passer commande", checkout_create_path(total: @cart.price), class: "btn btn-outline-primary my-3", remote: true %>
