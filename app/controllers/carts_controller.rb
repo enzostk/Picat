@@ -5,6 +5,7 @@ class CartsController < ApplicationController
   before_action :only_current_user_cart
 
   def show
+    @items = Item.all
     @items_in_cart = JoinTableItemsCart.where(cart_id: current_user.cart.id)
   end
 

@@ -148,3 +148,55 @@ ul {
   }
 }
 /*********************************************************************************************************/
+.button_primary {
+  color: rgb(0, 0, 0);
+  font-family: "proxima nova";
+  font-weight: 50;
+  font-size:25px;
+  text-align:center;
+  border: solid 2px #eb6864;
+  border-radius:50px;
+  padding: 10px 80px;
+  text-decoration: none;
+}
+.button_primary:hover {
+  background-color: #eb6864;
+  color:#fff;
+  transition-duration:200ms;
+}
+
+.button_secondary {
+  color: rgb(0, 0, 0);
+  font-family: "proxima nova";
+  font-weight: 50;
+  font-size:25px;
+  text-align:center;
+  border: solid 2px #aaaaaa;
+  border-radius:50px;
+  padding: 10px 80px;
+  text-decoration: none;
+}
+.button_secondary:hover {
+  background-color: #aaaaaa;
+  color:#fff;
+  transition-duration:200ms;
+}
+
+.card {
+  overflow:hidden;
+}
+.cardrow {
+  display:flex;
+  place-items: center;
+  justify-content: center;
+}
+.card-home {
+	
+  display:flex;
+  border-radius:12px;
+  transition:0.15s ease-in-out;
+}
+.card-home:hover {
+  box-shadow: 19px 19px 32px 9px rgba(0,0,0,0.44);
+  transform: translateY(-10px) scale(1.1)
+}

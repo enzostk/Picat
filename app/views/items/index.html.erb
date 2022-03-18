@@ -1,26 +1,28 @@
 <br><br>
 <div class="container">
-  <h1>Tout les articles</h1>
-  <br/>
-  <br/>
-  <br/>
-  <% @items.each do |item| %>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <a href="<%= item_path(item.id) %>" class='card-link'><h5 class="card-title"><%= item.name %></h5></a>
-      <p class="card-text"><%= item.description %></p>
-      <p class="card-text"><%= item.price %>€</p>
-      <% if user_signed_in? %>
-      <%= form_for @join_table_items_cart do |f| %>
-      <%= f.hidden_field :item_id, value: item.id %>
-      <%= f.hidden_field :cart_id, value: current_user.cart.id %>
-      <button type="submit" class='btn btn-success'>Ajouter au panier</button>
+  <h1>Tout les articles</h1><hr><br/><br/>
+    <div class="row justify-content-center">
+      <% @items.each do |item| %>
+        <div class="col-12 col-lg-3 col-md-6 mb-3">
+          <div class="card m-3 card-home" style="width: 18rem;">
+            <%= image_tag item.image_url, width: 300 %>
+            <div class="card-body">
+              <h5 class="card-title">Nom : <%= item.name %></h5>
+              <p class="card-text">Description : <%= item.description %></p>
+              <p style="overflow-y:scroll;height:25px" class="card-text">Valeur : <%= item.price %>€</p>
+              <a href="<%= item_path(item.id)%>" class='btn btn-primary'>En Savoir plus</a>
+            </div>
+            <% if user_signed_in? %>
+              <%= form_for @join_table_items_cart do |f| %>
+               <%= f.hidden_field :item_id, value: item.id %>
+               <%= f.hidden_field :cart_id, value: current_user.cart.id %>
+               <button type="submit" class='btn btn-success'>Ajouter au panier</button>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
       <% end %>
-    <% end %>
     </div>
-  </div>
-  <br/>
-  <% end %>
- </div>
+</div>
 
 
