@@ -59,10 +59,7 @@ Things you may want to cover 📝
 
 * How to run the test suite
  `rails db:seed`
- 
-* How to access the app
- 
-  `hhttps://picat-development.herokuapp.com/`
+
 
 
 * Remote: Verifying deployed
