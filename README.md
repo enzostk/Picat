@@ -5,27 +5,10 @@
 
 </div>
 </br></br>
+## Nothing is working anymore :crying_cat_face: :crying_cat_face: :crying_cat_face: 
 
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-## Process by following ⚙️
-
-	  `bundle install --without production` (the `sassc-rails` take a bunch of time)
-- Then `rake db:reset`
-- Then `rails db:create`
-- Then `rails db:migrate`
-- Check the migration's state : `rails db:migrate:status`
-- Forward `rails db:seed`
-- You are able to run `rails server`
-- Open your favourite Web browser, get to: `localhost:3000`
-
-
-
-<hr>
+# Link to heroku app
+https://git.heroku.com/picat-development.git
 
 
 
